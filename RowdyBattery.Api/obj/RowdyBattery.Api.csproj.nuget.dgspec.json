@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\lamad\\Documents\\4630 Code Projects\\RowdyBattery\\Rowdy-Battery-api\\RowdyBattery.api\\RowdyBattery.Api.csproj": {}
+    "C:\\Users\\lamad\\Documents\\4630 Code Projects\\RowdyBattery\\Rowdy-Battery-api\\RowdyBattery.Api\\RowdyBattery.Api.csproj": {}
   },
   "projects": {
-    "C:\\Users\\lamad\\Documents\\4630 Code Projects\\RowdyBattery\\Rowdy-Battery-api\\RowdyBattery.api\\RowdyBattery.Api.csproj": {
+    "C:\\Users\\lamad\\Documents\\4630 Code Projects\\RowdyBattery\\Rowdy-Battery-api\\RowdyBattery.Api\\RowdyBattery.Api.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\lamad\\Documents\\4630 Code Projects\\RowdyBattery\\Rowdy-Battery-api\\RowdyBattery.api\\RowdyBattery.Api.csproj",
+        "projectUniqueName": "C:\\Users\\lamad\\Documents\\4630 Code Projects\\RowdyBattery\\Rowdy-Battery-api\\RowdyBattery.Api\\RowdyBattery.Api.csproj",
         "projectName": "RowdyBattery.Api",
-        "projectPath": "C:\\Users\\lamad\\Documents\\4630 Code Projects\\RowdyBattery\\Rowdy-Battery-api\\RowdyBattery.api\\RowdyBattery.Api.csproj",
+        "projectPath": "C:\\Users\\lamad\\Documents\\4630 Code Projects\\RowdyBattery\\Rowdy-Battery-api\\RowdyBattery.Api\\RowdyBattery.Api.csproj",
         "packagesPath": "C:\\Users\\lamad\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\lamad\\Documents\\4630 Code Projects\\RowdyBattery\\Rowdy-Battery-api\\RowdyBattery.api\\obj\\",
+        "outputPath": "C:\\Users\\lamad\\Documents\\4630 Code Projects\\RowdyBattery\\Rowdy-Battery-api\\RowdyBattery.Api\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\lamad\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -51,6 +51,20 @@
             "Microsoft.AspNetCore.OpenApi": {
               "target": "Package",
               "version": "[9.0.10, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[9.0.10, )"
+            },
+            "Microsoft.EntityFrameworkCore.Sqlite": {
+              "target": "Package",
+              "version": "[9.0.10, )"
+            },
+            "Swashbuckle.AspNetCore": {
+              "target": "Package",
+              "version": "[9.0.6, )"
             }
           },
           "imports": [
@@ -119,6 +133,12 @@
       "frameworks": {
         "net9.0": {
           "targetAlias": "net9.0",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore.Sqlite": {
+              "target": "Package",
+              "version": "[9.0.10, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",

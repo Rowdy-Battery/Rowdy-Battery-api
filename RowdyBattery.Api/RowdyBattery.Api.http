@@ -4,3 +4,29 @@ GET {{RowdyBattery.Api_HostAddress}}/weatherforecast/
 Accept: application/json
 
 ###
+### GET all
+GET https://localhost:{{port}}/catalog
+
+### GET 1
+GET https://localhost:{{port}}/catalog/1
+
+### CREATE
+POST https://localhost:{{port}}/catalog
+Content-Type: application/json
+
+{ "name": "Rowdy Battery 15000mAh", "price": 159.99 }
+
+### UPDATE
+PUT https://localhost:{{port}}/catalog/1
+Content-Type: application/json
+
+{ "name": "Rowdy Battery 1000mAh v2", "price": 54.99 }
+
+### RATE
+POST https://localhost:{{port}}/catalog/1/ratings
+Content-Type: application/json
+
+{ "stars": 5, "userName": "yusef", "review": "Great!" }
+
+### DELETE
+DELETE https://localhost:{{port}}/catalog/3
