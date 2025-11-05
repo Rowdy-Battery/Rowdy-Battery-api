@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "nT03bJil+QM=",
+  "dgSpecHash": "/bRtzjnxOq0=",
   "success": true,
-  "projectFilePath": "C:\\Users\\lamad\\Documents\\4630 Code Projects\\RowdyBattery\\Rowdy-Battery-api\\RowdyBattery.Api\\RowdyBattery.Api.csproj",
+  "projectFilePath": "C:\\Users\\lamad\\Documents\\4630 Code Projects\\RowdyBattery\\Rowdy-Battery-api\\RowdyBattery.api\\RowdyBattery.Api.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\lamad\\.nuget\\packages\\microsoft.aspnetcore.openapi\\9.0.10\\microsoft.aspnetcore.openapi.9.0.10.nupkg.sha512",
     "C:\\Users\\lamad\\.nuget\\packages\\microsoft.openapi\\1.6.17\\microsoft.openapi.1.6.17.nupkg.sha512"

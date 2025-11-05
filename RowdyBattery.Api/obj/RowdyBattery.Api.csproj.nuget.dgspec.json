@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\lamad\\Documents\\4630 Code Projects\\RowdyBattery\\Rowdy-Battery-api\\RowdyBattery.Api\\RowdyBattery.Api.csproj": {}
+    "C:\\Users\\lamad\\Documents\\4630 Code Projects\\RowdyBattery\\Rowdy-Battery-api\\RowdyBattery.api\\RowdyBattery.Api.csproj": {}
   },
   "projects": {
-    "C:\\Users\\lamad\\Documents\\4630 Code Projects\\RowdyBattery\\Rowdy-Battery-api\\RowdyBattery.Api\\RowdyBattery.Api.csproj": {
+    "C:\\Users\\lamad\\Documents\\4630 Code Projects\\RowdyBattery\\Rowdy-Battery-api\\RowdyBattery.api\\RowdyBattery.Api.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\lamad\\Documents\\4630 Code Projects\\RowdyBattery\\Rowdy-Battery-api\\RowdyBattery.Api\\RowdyBattery.Api.csproj",
+        "projectUniqueName": "C:\\Users\\lamad\\Documents\\4630 Code Projects\\RowdyBattery\\Rowdy-Battery-api\\RowdyBattery.api\\RowdyBattery.Api.csproj",
         "projectName": "RowdyBattery.Api",
-        "projectPath": "C:\\Users\\lamad\\Documents\\4630 Code Projects\\RowdyBattery\\Rowdy-Battery-api\\RowdyBattery.Api\\RowdyBattery.Api.csproj",
+        "projectPath": "C:\\Users\\lamad\\Documents\\4630 Code Projects\\RowdyBattery\\Rowdy-Battery-api\\RowdyBattery.api\\RowdyBattery.Api.csproj",
         "packagesPath": "C:\\Users\\lamad\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\lamad\\Documents\\4630 Code Projects\\RowdyBattery\\Rowdy-Battery-api\\RowdyBattery.Api\\obj\\",
+        "outputPath": "C:\\Users\\lamad\\Documents\\4630 Code Projects\\RowdyBattery\\Rowdy-Battery-api\\RowdyBattery.api\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\lamad\\AppData\\Roaming\\NuGet\\NuGet.Config"
