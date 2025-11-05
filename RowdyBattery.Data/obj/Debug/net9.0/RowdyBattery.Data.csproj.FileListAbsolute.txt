@@ -1,0 +1,16 @@
+C:\Users\lamad\Documents\4630 Code Projects\RowdyBattery\Rowdy-Battery-api\RowdyBattery.Data\bin\Debug\net9.0\RowdyBattery.Data.deps.json
+C:\Users\lamad\Documents\4630 Code Projects\RowdyBattery\Rowdy-Battery-api\RowdyBattery.Data\bin\Debug\net9.0\RowdyBattery.Data.dll
+C:\Users\lamad\Documents\4630 Code Projects\RowdyBattery\Rowdy-Battery-api\RowdyBattery.Data\bin\Debug\net9.0\RowdyBattery.Data.pdb
+C:\Users\lamad\Documents\4630 Code Projects\RowdyBattery\Rowdy-Battery-api\RowdyBattery.Data\bin\Debug\net9.0\RowdyBattery.Domain.dll
+C:\Users\lamad\Documents\4630 Code Projects\RowdyBattery\Rowdy-Battery-api\RowdyBattery.Data\bin\Debug\net9.0\RowdyBattery.Domain.pdb
+C:\Users\lamad\Documents\4630 Code Projects\RowdyBattery\Rowdy-Battery-api\RowdyBattery.Data\obj\Debug\net9.0\RowdyBattery.Data.csproj.AssemblyReference.cache
+C:\Users\lamad\Documents\4630 Code Projects\RowdyBattery\Rowdy-Battery-api\RowdyBattery.Data\obj\Debug\net9.0\RowdyBattery.Data.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\lamad\Documents\4630 Code Projects\RowdyBattery\Rowdy-Battery-api\RowdyBattery.Data\obj\Debug\net9.0\RowdyBattery.Data.AssemblyInfoInputs.cache
+C:\Users\lamad\Documents\4630 Code Projects\RowdyBattery\Rowdy-Battery-api\RowdyBattery.Data\obj\Debug\net9.0\RowdyBattery.Data.AssemblyInfo.cs
+C:\Users\lamad\Documents\4630 Code Projects\RowdyBattery\Rowdy-Battery-api\RowdyBattery.Data\obj\Debug\net9.0\RowdyBattery.Data.csproj.CoreCompileInputs.cache
+C:\Users\lamad\Documents\4630 Code Projects\RowdyBattery\Rowdy-Battery-api\RowdyBattery.Data\obj\Debug\net9.0\RowdyBattery.Data.sourcelink.json
+C:\Users\lamad\Documents\4630 Code Projects\RowdyBattery\Rowdy-Battery-api\RowdyBattery.Data\obj\Debug\net9.0\RowdyBat.601771CB.Up2Date
+C:\Users\lamad\Documents\4630 Code Projects\RowdyBattery\Rowdy-Battery-api\RowdyBattery.Data\obj\Debug\net9.0\RowdyBattery.Data.dll
+C:\Users\lamad\Documents\4630 Code Projects\RowdyBattery\Rowdy-Battery-api\RowdyBattery.Data\obj\Debug\net9.0\refint\RowdyBattery.Data.dll
+C:\Users\lamad\Documents\4630 Code Projects\RowdyBattery\Rowdy-Battery-api\RowdyBattery.Data\obj\Debug\net9.0\RowdyBattery.Data.pdb
+C:\Users\lamad\Documents\4630 Code Projects\RowdyBattery\Rowdy-Battery-api\RowdyBattery.Data\obj\Debug\net9.0\ref\RowdyBattery.Data.dll

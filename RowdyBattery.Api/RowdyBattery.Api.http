@@ -1,0 +1,6 @@
+@RowdyBattery.Api_HostAddress = http://localhost:5007
+
+GET {{RowdyBattery.Api_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

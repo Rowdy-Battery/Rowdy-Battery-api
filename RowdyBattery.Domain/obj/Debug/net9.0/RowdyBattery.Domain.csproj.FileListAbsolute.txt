@@ -1,0 +1,12 @@
+C:\Users\lamad\Documents\4630 Code Projects\RowdyBattery\Rowdy-Battery-api\RowdyBattery.Domain\bin\Debug\net9.0\RowdyBattery.Domain.deps.json
+C:\Users\lamad\Documents\4630 Code Projects\RowdyBattery\Rowdy-Battery-api\RowdyBattery.Domain\bin\Debug\net9.0\RowdyBattery.Domain.dll
+C:\Users\lamad\Documents\4630 Code Projects\RowdyBattery\Rowdy-Battery-api\RowdyBattery.Domain\bin\Debug\net9.0\RowdyBattery.Domain.pdb
+C:\Users\lamad\Documents\4630 Code Projects\RowdyBattery\Rowdy-Battery-api\RowdyBattery.Domain\obj\Debug\net9.0\RowdyBattery.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\lamad\Documents\4630 Code Projects\RowdyBattery\Rowdy-Battery-api\RowdyBattery.Domain\obj\Debug\net9.0\RowdyBattery.Domain.AssemblyInfoInputs.cache
+C:\Users\lamad\Documents\4630 Code Projects\RowdyBattery\Rowdy-Battery-api\RowdyBattery.Domain\obj\Debug\net9.0\RowdyBattery.Domain.AssemblyInfo.cs
+C:\Users\lamad\Documents\4630 Code Projects\RowdyBattery\Rowdy-Battery-api\RowdyBattery.Domain\obj\Debug\net9.0\RowdyBattery.Domain.csproj.CoreCompileInputs.cache
+C:\Users\lamad\Documents\4630 Code Projects\RowdyBattery\Rowdy-Battery-api\RowdyBattery.Domain\obj\Debug\net9.0\RowdyBattery.Domain.sourcelink.json
+C:\Users\lamad\Documents\4630 Code Projects\RowdyBattery\Rowdy-Battery-api\RowdyBattery.Domain\obj\Debug\net9.0\RowdyBattery.Domain.dll
+C:\Users\lamad\Documents\4630 Code Projects\RowdyBattery\Rowdy-Battery-api\RowdyBattery.Domain\obj\Debug\net9.0\refint\RowdyBattery.Domain.dll
+C:\Users\lamad\Documents\4630 Code Projects\RowdyBattery\Rowdy-Battery-api\RowdyBattery.Domain\obj\Debug\net9.0\RowdyBattery.Domain.pdb
+C:\Users\lamad\Documents\4630 Code Projects\RowdyBattery\Rowdy-Battery-api\RowdyBattery.Domain\obj\Debug\net9.0\ref\RowdyBattery.Domain.dll
