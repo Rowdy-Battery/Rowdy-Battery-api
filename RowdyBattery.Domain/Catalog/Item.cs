@@ -1,23 +1,36 @@
-namespace RowdyBattery.Domain.Catalog;
+using System;
+using System.Collections.Generic;
 
-public class Item
+namespace RowdyBattery.Domain.Catalog
 {
-    public int Id { get; private set; }
-    public string Name { get; private set; }
-    public decimal Price { get; private set; }
-
-    // Ratings will be used later (EF)
-    public List<Rating> Ratings { get; private set; } = new();
-
-    public Item(int id, string name, decimal price)
+    public class Item
     {
-        if (string.IsNullOrWhiteSpace(name)) throw new ArgumentException("Name required");
-        if (price < 0) throw new ArgumentException("Price must be >= 0");
+        // Use an integer Id because the API and data seeding expect an int identifier
+        public int Id { get; set; }
 
-        Id = id;
-        Name = name;
-        Price = price;
+        public string Name { get; set; } = string.Empty;
+        public string Description { get; set; } = string.Empty;
+        public string Brand { get; set; } = string.Empty;
+        public decimal Price { get; set; }
+
+        // Ratings navigation property
+        public List<Rating> Ratings { get; set; } = new();
+
+        // Parameterless ctor needed by EF
+        public Item() { }
+
+        // Convenience ctor used by seeding and controllers
+        public Item(int id, string name, decimal price)
+        {
+            Id = id;
+            Name = name ?? string.Empty;
+            Price = price;
+        }
+
+        public void AddRating(Rating rating)
+        {
+            if (rating == null) throw new ArgumentNullException(nameof(rating));
+            Ratings.Add(rating);
+        }
     }
-
-    public void AddRating(Rating rating) => Ratings.Add(rating);
 }

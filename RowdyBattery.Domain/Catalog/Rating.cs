@@ -1,19 +1,26 @@
-namespace RowdyBattery.Domain.Catalog;
-
-public class Rating
+namespace RowdyBattery.Domain.Catalog
 {
-    public int Id { get; private set; }            // needed later for EF
-    public int Stars { get; private set; }         // 1..5
-    public string UserName { get; private set; }
-    public string? Review { get; private set; }
+    public class Rating
+    {
+        public int Stars { get; set; }
+        public string UserName { get; set; }
+    public string Review { get; set; }
 
     public Rating(int stars, string userName, string? review)
-    {
-        if (stars < 1 || stars > 5) throw new ArgumentException("Stars must be 1..5");
-        if (string.IsNullOrWhiteSpace(userName)) throw new ArgumentException("Username required");
+        {
+            if (stars < 1 || stars > 5)
+            {
+                throw new System.ArgumentOutOfRangeException(nameof(stars), "Stars must be between 1 and 5.");
+            }
 
-        Stars = stars;
-        UserName = userName;
-        Review = review;
+            if (string.IsNullOrWhiteSpace(userName))
+            {
+                throw new System.ArgumentException("UserName cannot be null or empty.", nameof(userName));
+            }
+
+            this.Stars = stars;
+            this.UserName = userName;
+            this.Review = review ?? string.Empty;
+        }
     }
 }
