@@ -1,122 +1,93 @@
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
 using RowdyBattery.Data;
 using RowdyBattery.Domain.Catalog;
+using RowdyBattery.Api.DTOs;
+using Microsoft.EntityFrameworkCore;
 
-namespace RowdyBattery.Api.Controllers;
-
-[ApiController]
-// Support BOTH route styles:
-//  - /catalog
-//  - /api/Catalog
-[Route("[controller]")]
-[Route("api/[controller]")]
-public class CatalogController : ControllerBase
+namespace RowdyBattery.Api.Controllers
 {
-    private readonly StoreContext _db;
-    public CatalogController(StoreContext db) => _db = db;
-
-    // ----- DTOs (with validation so [ApiController] can auto-400) -----
-    public record CreateItemDto(
-        [System.ComponentModel.DataAnnotations.Required] string Name,
-        [System.ComponentModel.DataAnnotations.Range(0, double.MaxValue)] decimal Price);
-
-    public record UpdateItemDto(
-        [System.ComponentModel.DataAnnotations.Required] string Name,
-        [System.ComponentModel.DataAnnotations.Range(0, double.MaxValue)] decimal Price);
-
-    public record CreateRatingDto(
-        [System.ComponentModel.DataAnnotations.Range(1, 5)] int Stars,
-        [System.ComponentModel.DataAnnotations.Required] string UserName,
-        string? Review);
-
-    // ----- GET /catalog  or  /api/Catalog -----
-    [HttpGet]
-    [ProducesResponseType(StatusCodes.Status200OK)]
-    public async Task<IActionResult> GetAll()
-        => Ok(await _db.Items.AsNoTracking().ToListAsync());
-
-    // ----- GET /catalog/{id}  or  /api/Catalog/{id} -----
-    [HttpGet("{id:int}")]
-    [ProducesResponseType(StatusCodes.Status200OK)]
-    [ProducesResponseType(StatusCodes.Status404NotFound)]
-    public async Task<IActionResult> GetOne(int id)
+    [ApiController]
+    [Route("api/[controller]")]
+    public class CatalogController : ControllerBase
     {
-        var item = await _db.Items.FindAsync(id);
-        return item is null ? NotFound() : Ok(item);
-    }
+        private readonly StoreContext _context;
 
-    // ----- POST /catalog  -> 201 Created -----
-    [HttpPost]
-    [ProducesResponseType(StatusCodes.Status201Created)]
-    [ProducesResponseType(StatusCodes.Status400BadRequest)]
-    public async Task<IActionResult> Create([FromBody] CreateItemDto dto)
-    {
-        if (!ModelState.IsValid) return ValidationProblem(ModelState);
+        public CatalogController(StoreContext context)
+        {
+            _context = context;
+        }
 
-        var nextId = await _db.Items.AnyAsync() ? await _db.Items.MaxAsync(i => i.Id) + 1 : 1;
-        var item = new Item(nextId, dto.Name, dto.Price);
+        // GET: api/Catalog
+        [HttpGet]
+        public async Task<ActionResult<IEnumerable<Item>>> GetItems()
+        {
+            return await _context.Items.Include(i => i.Ratings).ToListAsync();
+        }
 
-        _db.Items.Add(item);
-        await _db.SaveChangesAsync();
+        // GET: api/Catalog/{id}
+        [HttpGet("{id}")]
+        public async Task<ActionResult<Item>> GetItem(int id)
+        {
+            var item = await _context.Items.Include(i => i.Ratings)
+                                           .FirstOrDefaultAsync(i => i.Id == id);
+            if (item == null) return NotFound();
+            return item;
+        }
 
-        return CreatedAtAction(nameof(GetOne), new { id = item.Id }, item);
-    }
+        // POST: api/Catalog
+        [HttpPost]
+        public async Task<ActionResult<Item>> CreateItem([FromBody] CreateItemDto dto)
+        {
+            var item = new Item { Name = dto.Name, Price = dto.Price };
+            _context.Items.Add(item);
+            await _context.SaveChangesAsync();
+            return CreatedAtAction(nameof(GetItem), new { id = item.Id }, item);
+        }
 
-    // ----- PUT /catalog/{id}  -> 200 or 404 -----
-    [HttpPut("{id:int}")]
-    [ProducesResponseType(StatusCodes.Status200OK)]
-    [ProducesResponseType(StatusCodes.Status400BadRequest)]
-    [ProducesResponseType(StatusCodes.Status404NotFound)]
-    public async Task<IActionResult> Update(int id, [FromBody] UpdateItemDto dto)
-    {
-        if (!ModelState.IsValid) return ValidationProblem(ModelState);
+        // PUT: api/Catalog/{id}
+        [HttpPut("{id}")]
+        public async Task<IActionResult> UpdateItem(int id, [FromBody] UpdateItemDto dto)
+        {
+            var item = await _context.Items.FindAsync(id);
+            if (item == null) return NotFound();
+            item.Name = dto.Name;
+            item.Price = dto.Price;
+            await _context.SaveChangesAsync();
+            return NoContent();
+        }
 
-        var existing = await _db.Items.FindAsync(id);
-        if (existing is null) return NotFound();
+        // DELETE: api/Catalog/{id}
+        [HttpDelete("{id}")]
+        public async Task<IActionResult> DeleteItem(int id)
+        {
+            var item = await _context.Items.FindAsync(id);
+            if (item == null) return NotFound();
+            _context.Items.Remove(item);
+            await _context.SaveChangesAsync();
+            return NoContent();
+        }
 
-        var updated = new Item(id, dto.Name, dto.Price);
-        _db.Entry(existing).CurrentValues.SetValues(updated);
-        await _db.SaveChangesAsync();
-
-        return Ok(updated);
-    }
-
-    // ----- DELETE /catalog/{id}  -> 204 or 404 -----
-    [HttpDelete("{id:int}")]
-    [ProducesResponseType(StatusCodes.Status204NoContent)]
-    [ProducesResponseType(StatusCodes.Status404NotFound)]
-    public async Task<IActionResult> Delete(int id)
-    {
-        var item = await _db.Items.FindAsync(id);
-        if (item is null) return NotFound();
-
-        _db.Items.Remove(item);
-        await _db.SaveChangesAsync();
-        return NoContent();
-    }
-
-    // ----- POST /catalog/{id}/ratings  -> 200 or 400 or 404 -----
-    [HttpPost("{id:int}/ratings")]
-    [ProducesResponseType(StatusCodes.Status200OK)]
-    [ProducesResponseType(StatusCodes.Status400BadRequest)]
-    [ProducesResponseType(StatusCodes.Status404NotFound)]
-    public async Task<IActionResult> Rate(int id, [FromBody] CreateRatingDto dto)
-    {
-        if (!ModelState.IsValid) return ValidationProblem(ModelState);
-
-        var item = await _db.Items.Include(i => i.Ratings).FirstOrDefaultAsync(i => i.Id == id);
-        if (item is null) return NotFound();
+        // POST: api/Catalog/{id}/ratings
+        [HttpPost("{id}/ratings")]
+        public async Task<IActionResult> AddRating(int id, [FromBody] CreateRatingDto dto)
+        {
+            var item = await _context.Items.Include(i => i.Ratings)
+                                           .FirstOrDefaultAsync(i => i.Id == id);
+            if (item == null) return NotFound();
 
             try
             {
-                item.AddRating(new Rating(dto.Stars, dto.UserName, dto.Review ?? string.Empty));
-            await _db.SaveChangesAsync();
-            return Ok(item);
-        }
-        catch (ArgumentException)
-        {
-            return BadRequest();
+                // Rating's setters are private; use its public constructor
+                var rating = new Rating(dto.Stars, dto.UserName, dto.Review);
+                item.Ratings.Add(rating);
+                await _context.SaveChangesAsync();
+                return Ok();
+            }
+            catch (ArgumentException ex)
+            {
+                // Domain validation failed (e.g., invalid stars)
+                return BadRequest(new { error = ex.Message });
+            }
         }
     }
 }
