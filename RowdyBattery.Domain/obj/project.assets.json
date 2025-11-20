@@ -8,19 +8,19 @@
     "net9.0": []
   },
   "packageFolders": {
-    "C:\\Users\\lamad\\.nuget\\packages\\": {}
+    "C:\\Users\\zixin\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\lamad\\Documents\\4630 Code Projects\\RowdyBattery\\Rowdy-Battery-api\\RowdyBattery.Domain\\RowdyBattery.Domain.csproj",
+      "projectUniqueName": "C:\\Users\\zixin\\OneDrive\\Documents\\GitHub\\Rowdy-Battery-api\\RowdyBattery.Domain\\RowdyBattery.Domain.csproj",
       "projectName": "RowdyBattery.Domain",
-      "projectPath": "C:\\Users\\lamad\\Documents\\4630 Code Projects\\RowdyBattery\\Rowdy-Battery-api\\RowdyBattery.Domain\\RowdyBattery.Domain.csproj",
-      "packagesPath": "C:\\Users\\lamad\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\lamad\\Documents\\4630 Code Projects\\RowdyBattery\\Rowdy-Battery-api\\RowdyBattery.Domain\\obj\\",
+      "projectPath": "C:\\Users\\zixin\\OneDrive\\Documents\\GitHub\\Rowdy-Battery-api\\RowdyBattery.Domain\\RowdyBattery.Domain.csproj",
+      "packagesPath": "C:\\Users\\zixin\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\zixin\\OneDrive\\Documents\\GitHub\\Rowdy-Battery-api\\RowdyBattery.Domain\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\lamad\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "C:\\Users\\zixin\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net9.0"
@@ -65,7 +65,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.306/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.304/PortableRuntimeIdentifierGraph.json"
       }
     }
   }
