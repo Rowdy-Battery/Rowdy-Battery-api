@@ -1,3 +1,4 @@
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using RowdyBattery.Data;
 using RowdyBattery.Domain.Catalog;
@@ -58,6 +59,7 @@ namespace RowdyBattery.Api.Controllers
 
         // DELETE: api/Catalog/{id}
         [HttpDelete("{id}")]
+        [Authorize("delete:catalog")]
         public async Task<IActionResult> DeleteItem(int id)
         {
             var item = await _context.Items.FindAsync(id);

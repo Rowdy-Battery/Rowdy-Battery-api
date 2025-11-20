@@ -1,0 +1,17 @@
+@port = 7250
+
+### GET token from Auth0 (automatically store access_token)
+curl --request POST \
+  --url https://dev-ttklewfe888xll2g.us.auth0.com/oauth/token \
+  --header 'content-type: application/json' \
+  --data '{
+    "client_id":"16PaXzpXyVqVs0bQ1bACokY1qexBwVEO",
+    "client_secret":"yEbrFIg3DnQW9SYNYGYRnFw1SUPJ8fkprZSoc5h3ql-1jhP6lTEN0pgYpjNicYMd",
+    "audience":"https://rowdy-battery",
+    "grant_type":"client_credentials"
+  }'
+
+### DELETE a Item to the Catalog collection (uses token from previous response)
+curl --request DELETE \
+  --url http://localhost:7250/catalog/3 \
+  --header 'authorization: Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6Ik9jMk13TmpXNGp6eS1rVmRvYlhNTyJ9.eyJpc3MiOiJodHRwczovL2Rldi10dGtsZXdmZTg4OHhsbDJnLnVzLmF1dGgwLmNvbS8iLCJzdWIiOiIxNlBhWHpwWHlWcVZzMGJRMWJBQ29rWTFxZXhCd1ZFT0BjbGllbnRzIiwiYXVkIjoiaHR0cHM6Ly9yb3dkeS1iYXR0ZXJ5IiwiaWF0IjoxNzYzNjgxMDk2LCJleHAiOjE3NjM3Njc0OTYsImd0eSI6ImNsaWVudC1jcmVkZW50aWFscyIsImF6cCI6IjE2UGFYenBYeVZxVnMwYlExYkFDb2tZMXFleEJ3VkVPIn0.oXwzCb8LGjNYoo-ySh7sSP-XEI0FXU6mD7UHyTiQWjG3MsLv5npt2R-j6IFXKAV8618WJnThQas7TValH8YJaqqmz8Y9IzHd6iQhZPXJp5oKxV_IcxbuN8y6Zq_w65NI_jA0IvDZyi5uBnUrUpneBdgM1HOFKKJyVUdocFDH2j0be9t4LuQANfLa5UZaNiy4AYatTTYosmnrKDid4pxGJAXJL1kdVulyvSR5JmuIj8zxQmyjNJLrclM8gIBqAupwTV3RGErOAH2j3deblltVaxv-_yfJWPhCBkPACJXBCLSwStLVJAtSC7Po4MV5ol8mUOjbZSjG27cMJ951l8-0NQ'
