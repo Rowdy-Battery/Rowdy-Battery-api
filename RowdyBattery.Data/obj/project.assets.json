@@ -1153,8 +1153,8 @@
         "net9.0": {
           "targetAlias": "net9.0",
           "projectReferences": {
-            "c:\\Users\\zixin\\OneDrive\\Documents\\GitHub\\Rowdy-Battery-api\\RowdyBattery.Domain\\RowdyBattery.Domain.csproj": {
-              "projectPath": "c:\\Users\\zixin\\OneDrive\\Documents\\GitHub\\Rowdy-Battery-api\\RowdyBattery.Domain\\RowdyBattery.Domain.csproj"
+            "C:\\Users\\zixin\\OneDrive\\Documents\\GitHub\\Rowdy-Battery-api\\RowdyBattery.Domain\\RowdyBattery.Domain.csproj": {
+              "projectPath": "C:\\Users\\zixin\\OneDrive\\Documents\\GitHub\\Rowdy-Battery-api\\RowdyBattery.Domain\\RowdyBattery.Domain.csproj"
             }
           }
         }

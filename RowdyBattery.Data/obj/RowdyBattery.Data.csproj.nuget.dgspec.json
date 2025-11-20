@@ -26,8 +26,8 @@
           "net9.0": {
             "targetAlias": "net9.0",
             "projectReferences": {
-              "c:\\Users\\zixin\\OneDrive\\Documents\\GitHub\\Rowdy-Battery-api\\RowdyBattery.Domain\\RowdyBattery.Domain.csproj": {
-                "projectPath": "c:\\Users\\zixin\\OneDrive\\Documents\\GitHub\\Rowdy-Battery-api\\RowdyBattery.Domain\\RowdyBattery.Domain.csproj"
+              "C:\\Users\\zixin\\OneDrive\\Documents\\GitHub\\Rowdy-Battery-api\\RowdyBattery.Domain\\RowdyBattery.Domain.csproj": {
+                "projectPath": "C:\\Users\\zixin\\OneDrive\\Documents\\GitHub\\Rowdy-Battery-api\\RowdyBattery.Domain\\RowdyBattery.Domain.csproj"
               }
             }
           }
@@ -73,14 +73,14 @@
         }
       }
     },
-    "c:\\Users\\zixin\\OneDrive\\Documents\\GitHub\\Rowdy-Battery-api\\RowdyBattery.Domain\\RowdyBattery.Domain.csproj": {
+    "C:\\Users\\zixin\\OneDrive\\Documents\\GitHub\\Rowdy-Battery-api\\RowdyBattery.Domain\\RowdyBattery.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "c:\\Users\\zixin\\OneDrive\\Documents\\GitHub\\Rowdy-Battery-api\\RowdyBattery.Domain\\RowdyBattery.Domain.csproj",
+        "projectUniqueName": "C:\\Users\\zixin\\OneDrive\\Documents\\GitHub\\Rowdy-Battery-api\\RowdyBattery.Domain\\RowdyBattery.Domain.csproj",
         "projectName": "RowdyBattery.Domain",
-        "projectPath": "c:\\Users\\zixin\\OneDrive\\Documents\\GitHub\\Rowdy-Battery-api\\RowdyBattery.Domain\\RowdyBattery.Domain.csproj",
+        "projectPath": "C:\\Users\\zixin\\OneDrive\\Documents\\GitHub\\Rowdy-Battery-api\\RowdyBattery.Domain\\RowdyBattery.Domain.csproj",
         "packagesPath": "C:\\Users\\zixin\\.nuget\\packages\\",
-        "outputPath": "c:\\Users\\zixin\\OneDrive\\Documents\\GitHub\\Rowdy-Battery-api\\RowdyBattery.Domain\\obj\\",
+        "outputPath": "C:\\Users\\zixin\\OneDrive\\Documents\\GitHub\\Rowdy-Battery-api\\RowdyBattery.Domain\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\zixin\\AppData\\Roaming\\NuGet\\NuGet.Config"
