@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("RowdyBattery.Data")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e2d42aa2ff85dc17b75a59c6065e65a38c2cd28b")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e62331720d2aa0941254ad62585502e8ff4b9a79")]
 [assembly: System.Reflection.AssemblyProductAttribute("RowdyBattery.Data")]
 [assembly: System.Reflection.AssemblyTitleAttribute("RowdyBattery.Data")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
