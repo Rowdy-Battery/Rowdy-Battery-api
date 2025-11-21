@@ -30,3 +30,6 @@ Content-Type: application/json
 
 ### DELETE
 DELETE https://localhost:{{port}}/catalog/3
+
+### DELETE (API lab example)
+DELETE https://localhost:7250/catalog/3
